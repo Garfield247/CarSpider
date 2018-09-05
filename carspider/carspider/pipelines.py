@@ -17,7 +17,7 @@ class CarspiderPipeline(object):
 class JsonPipeline(object):
 
     def open_spider(self, spider):
-        filename = '%s.json'%spider.name
+        filename = './../%s.json'%spider.name
         self.fp = open(filename, 'a', encoding='utf-8')
 
     def process_item(self, item, spider):
