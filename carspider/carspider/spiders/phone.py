@@ -29,7 +29,7 @@ class PhoneSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = response.meta['item']
-        item['phone_brand'] = response.xpath('.//a[@id="_j_breadcrumb"]/text()').extract_first()
+        item['phone_brand'] = response.xpath('.//a[@id="_j_breadcrumb"]/text()').extract_first().rstrip('手机')
         item['reference_price'] = response.xpath('//b[@class="price-type"]/text()').extract_first()
         comment_href = response.xpath('.//a[contains(text(), "查看全部点评")]/@href').extract_first()
         if comment_href:
@@ -42,19 +42,21 @@ class PhoneSpider(scrapy.Spider):
         result = json.loads(response.text)
         content = result['list']
         html = Selector(text=content)
-        for comment in html.xpath('.//div[@class="comments-item"]'):
+        for div in html.xpath('.//div[@class="comments-item"]'):
             item = response.meta['item']
             comments = {}
-            comments['comment_user'] = comment.xpath('//div[@class="comments-user"]/a[@class="name"]/text()').extract_first()
-            comments['buy_price'] = comment.xpath('//div[@class="comments-user"]/p[contains(text(), "价格")]/text()').extract_first().split(':')[-1] if comment.xpath('//div[@class="comments-user"]/p[contains(text(), "价格")]/text()').extract_first() else None
-            comments['buy_date'] = comment.xpath('//div[@class="comments-user"]/p[contains(text(), "时间")]/text()').extract_first().split(':')[-1] if comment.xpath('//div[@class="comments-user"]/p[contains(text(), "时间")]/text()').extract_first() else None
-            comments['buy_address'] = comment.xpath('//div[@class="comments-user"]/p[contains(text(), "地点")]/text()').extract_first().split(':')[-1] if comment.xpath('//div[@class="comments-user"]/p[contains(text(), "地点")]/text()').extract_first() else None
-            comments['appraise'] = comment.xpath('.//div[@class="title"]/a/text()').extract_first()
-            comments['score'] = comment.xpath('.//div[starts-with(@class,"score")]/span/text()').extract_first()
-            comments['grade'] ={grade.xpath('./text()').extract_first().rstrip(':'):grade.xpath('./em/text()').extract_first() for grade in comment.xpath('.//div[@class="single-score"]/p/span') }
-            comments['advantage'] = comment.xpath('.//strong[@class="good"]/../p/text()').extract_first()
-            comments['disadvantage'] = comment.xpath('.//strong[@class="bad"]/../p/text()').extract_first()
-            comments['upvote'] = int(re.findall(r'(\d+)赞',comment.xpath('.//a[@class="_j_review_vote"]').extract_first())[0]) if len(re.findall(r'(\d+)赞',comment.xpath('.//a[@class="_j_review_vote"]').extract_first()))>0 else 0
+            comments['comment_user'] = div.xpath('//div[@class="comments-user"]/a[@class="name"]/text()').extract_first()
+            comments['buy_price'] = div.xpath('//div[@class="comments-user"]/p[contains(text(), "价格")]/text()').extract_first().split(':')[-1] if div.xpath('//div[@class="comments-user"]/p[contains(text(), "价格")]/text()').extract_first() else None
+            comments['buy_date'] = div.xpath('//div[@class="comments-user"]/p[contains(text(), "时间")]/text()').extract_first().split(':')[-1] if div.xpath('//div[@class="comments-user"]/p[contains(text(), "时间")]/text()').extract_first() else None
+            comments['buy_address'] = div.xpath('//div[@class="comments-user"]/p[contains(text(), "地点")]/text()').extract_first().split(':')[-1] if div.xpath('//div[@class="comments-user"]/p[contains(text(), "地点")]/text()').extract_first() else None
+            comments['appraise'] = div.xpath('.//div[@class="title"]/a/text()').extract_first()
+            comments['score'] = div.xpath('.//div[starts-with(@class,"score")]/span/text()').extract_first()
+            comments['grade'] ={grade.xpath('./text()').extract_first().rstrip(':'):grade.xpath('./em/text()').extract_first() for grade in div.xpath('.//div[@class="single-score"]/p/span') }
+            # comments['advantage'] = div.xpath('.//strong[@class="good"]/../p/text()').extract_first()
+            # comments['disadvantage'] = div.xpath('.//strong[@class="bad"]/../p/text()').extract_first()
+            comment = { d.xpath('./strong/text()').extract_first().rstrip('：'):d.xpath('./p/text()').extract_first() for d in div.xpath('.//div[@class="content-inner"]/div[@class="words"]')}
+            comments['comment'] = div.xpath('.//div[@class="words-article"]/p/text()').extract_first() if not comment else comment
+            comments['upvote'] = int(re.findall(r'(\d+)赞',div.xpath('.//a[@class="_j_review_vote"]').extract_first())[0]) if len(re.findall(r'(\d+)赞',div.xpath('.//a[@class="_j_review_vote"]').extract_first()))>0 else 0
             item['comments'] = comments
             yield item
         if not result.get('isEnd'):
