@@ -8,11 +8,12 @@ from scrapy import Selector
 
 class Phone2Spider(scrapy.Spider):
     name = 'phone2'
-    # allowed_domains = ['http://product.pconline.com.cn']
-    start_urls = ['http://product.pconline.com.cn/mobile/list.shtml']
+    def start_requests(self):
+        for i in range(125):
+            url = 'http://product.pconline.com.cn/mobile/list_%ds1.shtml'%int(i*25)
+            yield scrapy.Request(url,callback=self.parse)
 
     def parse(self, response):
-        next_url = response.urljoin(response.xpath('.//div[@id="Jpager"]/a[@class="page-next"]/@href').extract_first())
         for li in response.xpath('.//ul[@id="JlistItems"]/li'):
             item = PhonespiderItem()
             item['phone_name'] = li.xpath('//div[@class="item-title"]/h3/a[@class="item-title-name"]/text()').extract_first()
@@ -20,7 +21,7 @@ class Phone2Spider(scrapy.Spider):
             item['reference_price'] = li.xpath('.//div[starts-with(@class,"price")]/a/text()').extract_first()
             info_url = response.urljoin(li.xpath('//div[@class="item-title"]/h3/a[@class="item-title-name"]/@href').extract_first())
             yield scrapy.Request(info_url,callback=self.parse_info,meta={'item':item})
-        yield scrapy.Request(next_url,callback=self.parse)
+
 
     def parse_info(self, response):
         item = response.meta['item']
@@ -55,9 +56,10 @@ class Phone2Spider(scrapy.Spider):
             comments['upvote'] = li.xpath('.//a[@class="good"]/span/text()').extract_first()
             item['comments'] = comments
             yield item
-        next_num = int(pgnum)+1
-        next_url = re.sub(r'pageNo=\d+', 'pageNo=%d'%next_num, response.url)
-        yield scrapy.Request(next_url,callback=self.parse_comments,meta={'item':response.meta['item']})
+        if len(response.xpath('/html/body/ul/li'))>0:
+            next_num = int(pgnum)+1
+            next_url = re.sub(r'pageNo=\d+', 'pageNo=%d'%next_num, response.url)
+            yield scrapy.Request(next_url,callback=self.parse_comments,meta={'item':response.meta['item']})
 
 
 

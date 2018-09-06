@@ -11,11 +11,13 @@ class PhoneSpider(scrapy.Spider):
     name = 'phone'
 
     def start_requests(self):
-        start_url = 'http://detail.zol.com.cn/cell_phone_index/subcate57_0_list_1_0_1_1_0_1.html'
-        yield scrapy.Request(start_url,callback=self.parse)
+        for i in range(1,38):
+            start_url = 'http://detail.zol.com.cn/cell_phone_index/subcate57_0_list_1_0_1_1_0_%d.html'%i
+            yield scrapy.Request(start_url,callback=self.parse)
 
     def parse(self, response):
-        next_href = response.xpath('.//a[@class="next"]/@href').extract_first()
+        # next_href = response.xpath('.//a[@class="next"]/@href').extract_first()
+        # print(next_href)
         for div in response.xpath('.//div[starts-with(@class,"list-item")]'):
             item = PhonespiderItem()
             item['phone_name'] = response.xpath('.//div[@class="pro-intro"]/h3/a/text()').extract_first()
@@ -23,9 +25,9 @@ class PhoneSpider(scrapy.Spider):
             info_url = response.urljoin(response.xpath('.//div[@class="pro-intro"]/h3/a/@href').extract_first())
             # print(url)
             yield scrapy.Request(info_url,callback=self.parse_info,meta={'item':item})
-        if next_href:
-            next_url = 'http://detail.zol.com.cn%s'%next_href
-            yield scrapy.Request(next_url,callback=self.parse)
+        # if next_href:
+        #     next_url = response.urljoin(next_href)
+        #     yield scrapy.Request(next_url,callback=self.parse)
 
     def parse_info(self, response):
         item = response.meta['item']
@@ -52,8 +54,6 @@ class PhoneSpider(scrapy.Spider):
             comments['appraise'] = div.xpath('.//div[@class="title"]/a/text()').extract_first()
             comments['score'] = div.xpath('.//div[starts-with(@class,"score")]/span/text()').extract_first()
             comments['grade'] ={grade.xpath('./text()').extract_first().rstrip(':'):grade.xpath('./em/text()').extract_first() for grade in div.xpath('.//div[@class="single-score"]/p/span') }
-            # comments['advantage'] = div.xpath('.//strong[@class="good"]/../p/text()').extract_first()
-            # comments['disadvantage'] = div.xpath('.//strong[@class="bad"]/../p/text()').extract_first()
             comment = { d.xpath('./strong/text()').extract_first().rstrip('：'):d.xpath('./p/text()').extract_first() for d in div.xpath('.//div[@class="content-inner"]/div[@class="words"]')}
             comments['comment'] = div.xpath('.//div[@class="words-article"]/p/text()').extract_first() if not comment else comment
             comments['upvote'] = int(re.findall(r'(\d+)赞',div.xpath('.//a[@class="_j_review_vote"]').extract_first())[0]) if len(re.findall(r'(\d+)赞',div.xpath('.//a[@class="_j_review_vote"]').extract_first()))>0 else 0
