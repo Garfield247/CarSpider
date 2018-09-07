@@ -1,0 +1,451 @@
+2018-09-06 18:21:41 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: carspider)
+2018-09-06 18:21:41 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.6.4 (default, May 21 2018, 11:39:59) - [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Linux-3.10.0-693.el7.x86_64-x86_64-with-centos-7.5.1804-Core
+2018-09-06 18:21:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'carspider', 'DOWNLOAD_DELAY': 1, 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'carspider.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['carspider.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'}
+2018-09-06 18:21:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-09-06 18:21:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-06 18:21:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-06 18:21:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['carspider.pipelines.JsonPipeline']
+2018-09-06 18:21:41 [scrapy.core.engine] INFO: Spider opened
+2018-09-06 18:21:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-06 18:22:08 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: carspider)
+2018-09-06 18:22:08 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.6.4 (default, May 21 2018, 11:39:59) - [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Linux-3.10.0-693.el7.x86_64-x86_64-with-centos-7.5.1804-Core
+2018-09-06 18:22:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'carspider', 'DOWNLOAD_DELAY': 1, 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'carspider.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['carspider.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'}
+2018-09-06 18:22:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-09-06 18:22:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-06 18:22:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-06 18:22:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['carspider.pipelines.JsonPipeline']
+2018-09-06 18:22:08 [scrapy.core.engine] INFO: Spider opened
+2018-09-06 18:22:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-06 18:22:41 [scrapy.extensions.logstats] INFO: Crawled 41 pages (at 41 pages/min), scraped 48 items (at 48 items/min)
+2018-09-06 18:23:08 [scrapy.extensions.logstats] INFO: Crawled 61 pages (at 61 pages/min), scraped 180 items (at 180 items/min)
+2018-09-06 18:23:41 [scrapy.extensions.logstats] INFO: Crawled 92 pages (at 51 pages/min), scraped 404 items (at 356 items/min)
+2018-09-06 18:24:08 [scrapy.extensions.logstats] INFO: Crawled 131 pages (at 70 pages/min), scraped 528 items (at 348 items/min)
+2018-09-06 18:24:41 [scrapy.extensions.logstats] INFO: Crawled 142 pages (at 50 pages/min), scraped 724 items (at 320 items/min)
+2018-09-06 18:25:08 [scrapy.extensions.logstats] INFO: Crawled 200 pages (at 69 pages/min), scraped 902 items (at 374 items/min)
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1185512%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1181373%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1185512%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141958%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1185512%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141958%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1185512%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141958%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141958%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=511465%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141958%5Elevel=0%5Efilter=1%5Epage=6.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141958%5Elevel=0%5Efilter=1%5Epage=7.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1161630%5Elevel=0%5Efilter=1%5Epage=8.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=9.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1175015%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=10.html2018-09-06 18:25:41 [scrapy.extensions.logstats] INFO: Crawled 191 pages (at 49 pages/min), scraped 1038 items (at 314 items/min)
+2018-09-06 18:26:08 [scrapy.extensions.logstats] INFO: Crawled 277 pages (at 77 pages/min), scraped 1211 items (at 309 items/min)
+2018-09-06 18:26:41 [scrapy.extensions.logstats] INFO: Crawled 241 pages (at 50 pages/min), scraped 1515 items (at 477 items/min)
+2018-09-06 18:27:08 [scrapy.extensions.logstats] INFO: Crawled 357 pages (at 80 pages/min), scraped 1504 items (at 293 items/min)
+
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=10.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151235%5Elevel=0%5Efilter=1%5Epage=2.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=11.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151235%5Elevel=0%5Efilter=1%5Epage=3.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=12.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151235%5Elevel=0%5Efilter=1%5Epage=4.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=13.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151235%5Elevel=0%5Efilter=1%5Epage=5.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=14.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=15.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=16.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=17.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1141899%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=18.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=19.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=19.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=19.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1151520%5Elevel=0%5Efilter=1%5Epage=19.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=19.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=19.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=20.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=20.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=20.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=20.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=20.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=21.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=21.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=21.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=21.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=21.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=22.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=22.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=22.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=22.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=22.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=23.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=23.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=23.html2018-09-06 18:27:41 [scrapy.extensions.logstats] INFO: Crawled 289 pages (at 48 pages/min), scraped 1989 items (at 474 items/min)
+2018-09-06 18:28:08 [scrapy.extensions.logstats] INFO: Crawled 443 pages (at 86 pages/min), scraped 1704 items (at 200 items/min)
+2018-09-06 18:28:41 [scrapy.extensions.logstats] INFO: Crawled 339 pages (at 50 pages/min), scraped 2497 items (at 508 items/min)
+
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=23.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=23.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=24.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=24.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=24.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=24.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=24.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=25.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=25.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=25.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=25.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=25.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=26.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=26.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=26.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=26.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=26.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=27.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=27.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=27.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=27.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=27.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=28.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=28.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=28.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=28.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=28.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=29.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=29.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=29.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=29.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=29.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=30.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=30.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=30.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=30.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=30.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=31.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=31.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=31.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=31.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=31.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=32.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=32.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=32.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=32.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=32.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=33.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=33.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=33.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=33.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=33.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=34.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=34.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1144236%5Elevel=0%5Efilter=1%5Epage=34.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=34.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=34.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=35.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=35.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=35.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=35.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=36.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=36.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=36.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=36.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=37.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=37.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=37.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=37.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=38.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=38.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=38.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=38.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=39.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=39.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=39.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=39.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=40.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=40.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=40.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=40.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=41.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=41.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=41.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=41.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=42.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=42.html2018-09-06 18:29:08 [scrapy.extensions.logstats] INFO: Crawled 536 pages (at 93 pages/min), scraped 1854 items (at 150 items/min)
+2018-09-06 18:29:41 [scrapy.extensions.logstats] INFO: Crawled 389 pages (at 50 pages/min), scraped 2997 items (at 500 items/min)
+2018-09-06 18:30:08 [scrapy.extensions.logstats] INFO: Crawled 618 pages (at 82 pages/min), scraped 2004 items (at 150 items/min)
+2018-09-06 18:30:30 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-09-06 18:30:30 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 189511,
+ 'downloader/request_count': 429,
+ 'downloader/request_method_count/GET': 429,
+ 'downloader/response_bytes': 3832537,
+ 'downloader/response_count': 429,
+ 'downloader/response_status_count/200': 429,
+ 'dupefilter/filtered': 1738,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 9, 6, 10, 30, 30, 251807),
+ 'item_scraped_count': 3366,
+ 'log_count/INFO': 15,
+ 'memusage/max': 101339136,
+ 'memusage/startup': 44589056,
+ 'request_depth_max': 76,
+ 'response_received_count': 429,
+ 'scheduler/dequeued': 428,
+ 'scheduler/dequeued/memory': 428,
+ 'scheduler/enqueued': 428,
+ 'scheduler/enqueued/memory': 428,
+ 'start_time': datetime.datetime(2018, 9, 6, 10, 21, 41, 304936)}
+2018-09-06 18:30:30 [scrapy.core.engine] INFO: Spider closed (finished)
+
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=42.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=42.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=43.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=43.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=43.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=43.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=44.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=44.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=44.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=44.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=45.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=45.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=45.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=45.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=46.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=46.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=46.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=46.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=47.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=47.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=47.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=47.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=48.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=48.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=48.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1167458%5Elevel=0%5Efilter=1%5Epage=48.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=49.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=49.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=49.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=50.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=50.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=50.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=51.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=51.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=51.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1147818%5Elevel=0%5Efilter=1%5Epage=52.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=52.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=52.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=53.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=53.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=54.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1173991%5Elevel=0%5Efilter=1%5Epage=54.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=55.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=56.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=57.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=58.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=59.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=60.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=61.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=62.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=63.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=64.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=65.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=66.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=67.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=68.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=69.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=70.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=71.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=72.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=73.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=74.html
+http://detail.zol.com.cn/xhr4_Review_GetList_proId=1174958%5Elevel=0%5Efilter=1%5Epage=75.html
+2018-09-06 18:31:08 [scrapy.extensions.logstats] INFO: Crawled 667 pages (at 49 pages/min), scraped 2484 items (at 480 items/min)
+2018-09-06 18:31:36 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-09-06 18:31:36 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 307233,
+ 'downloader/request_count': 688,
+ 'downloader/request_method_count/GET': 688,
+ 'downloader/response_bytes': 10040130,
+ 'downloader/response_count': 688,
+ 'downloader/response_status_count/200': 687,
+ 'downloader/response_status_count/404': 1,
+ 'dupefilter/filtered': 2989,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 9, 6, 10, 31, 36, 174996),
+ 'item_scraped_count': 2676,
+ 'log_count/INFO': 16,
+ 'memusage/max': 95895552,
+ 'memusage/startup': 44568576,
+ 'request_depth_max': 95,
+ 'response_received_count': 688,
+ 'scheduler/dequeued': 686,
+ 'scheduler/dequeued/memory': 686,
+ 'scheduler/enqueued': 686,
+ 'scheduler/enqueued/memory': 686,
+ 'start_time': datetime.datetime(2018, 9, 6, 10, 22, 8, 687885)}
+2018-09-06 18:31:36 [scrapy.core.engine] INFO: Spider closed (finished)
