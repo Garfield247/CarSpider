@@ -13,6 +13,9 @@ class JdSpider(scrapy.Spider):
         for phone in list(set(re.findall(r'href="//(item.jd.com/\d+.html)"',response.text))):
             print(phone)
             yield scrapy.Request(url = 'https://%s'%phone,callback=self.parse_info)
+        next_utl = response.urljoin(response.xpath('.//a[contains(text(),"下一页")]/@href').extract_first()) if response.xpath('.//a[contains(text(),"下一页")]/@href').extract_first() else None
+        if next_utl:
+            yield scrapy.Request(url=next_utl,callback=self.parse)
 
     def parse_info(self, response):
         item = PhonespiderItem()
