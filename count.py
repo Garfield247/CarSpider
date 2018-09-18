@@ -1,14 +1,14 @@
 import os
 import json
-file = '/home/lvgang/Documents/Code/phone_car/carspider/carspider/phone.json'
+file = '/home/lvgang/Documents/utils/car.json'
 with open(file,'r')as fp:
     count = {}
     for line in fp:
         item = json.loads(line)
-        phone = item['phone_name']
+        phone = '%s-%s'%(item['brand'],item['version'])
         if phone in count.keys():
             count[phone] = count[phone]+1
         else:
             count[phone] = 1
-    print(count)
+    print(sorted(count.items(),key = lambda x:x[1],reverse = True))
     print(len(count.keys()))

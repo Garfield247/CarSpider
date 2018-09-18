@@ -11,20 +11,24 @@ class PhoneSpider(scrapy.Spider):
     name = 'phone'
 
     def start_requests(self):
+        page = []
         for i in range(1,38):
             start_url = 'http://detail.zol.com.cn/cell_phone_index/subcate57_0_list_1_0_1_1_0_%d.html'%i
-            yield scrapy.Request(start_url,callback=self.parse)
+            page.append(scrapy.Request(start_url,callback=self.parse))
+        return page
 
     def parse(self, response):
         # next_href = response.xpath('.//a[@class="next"]/@href').extract_first()
         # print(next_href)
+        page = []
         for div in response.xpath('.//div[starts-with(@class,"list-item")]'):
             item = PhonespiderItem()
             item['phone_name'] = response.xpath('.//div[@class="pro-intro"]/h3/a/text()').extract_first()
             item['parameter'] ={li.xpath('./span/text()').extract_first():li.xpath('./@title').extract_first() for li in response.xpath('.//div[starts-with(@class,"list-item")]/div[@class="pro-intro"]/ul[starts-with(@class,"param")]/li')}
             info_url = response.urljoin(response.xpath('.//div[@class="pro-intro"]/h3/a/@href').extract_first())
             # print(url)
-            yield scrapy.Request(info_url,callback=self.parse_info,meta={'item':item})
+            page.append(scrapy.Request(info_url,callback=self.parse_info,meta={'item':item}))
+        return page
         # if next_href:
         #     next_url = response.urljoin(next_href)
         #     yield scrapy.Request(next_url,callback=self.parse)
