@@ -5,6 +5,7 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import requests
 from scrapy import signals
 
 
@@ -101,3 +102,8 @@ class CarspiderDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+class ProxyMiddleware(object):
+    def process_request(self, request, spider):
+        proxy = requests.get(url = 'http://192.168.3.116:9527/api/rp').text
+        request.meta['proxy'] = "http://"+proxy

@@ -57,6 +57,7 @@ DEFAULT_REQUEST_HEADERS = {
 DOWNLOADER_MIDDLEWARES = {
    # 'carspider.middlewares.CarspiderDownloaderMiddleware': 543,
    # 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware':700,
+   'carspider.middlewares.ProxyMiddleware': 213,
 }
 
 # Enable or disable extensions
