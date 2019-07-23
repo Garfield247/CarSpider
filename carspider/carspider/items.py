@@ -17,11 +17,3 @@ class CarspiderItem(scrapy.Item):
     car_score = scrapy.Field()
     parameter = scrapy.Field()
     comments = scrapy.Field()
-
-class PhonespiderItem(scrapy.Item):
-    """docstring for PhonespiderItem"""
-    phone_brand = scrapy.Field()
-    phone_name = scrapy.Field()
-    reference_price = scrapy.Field()
-    parameter = scrapy.Field()
-    comments = scrapy.Field()
